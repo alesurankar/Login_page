@@ -123,11 +123,22 @@ header {
     font-weight: 700;
     text-shadow: 0 0 10px #f7f7f7;
     display: flex;
+    padding: 0 20px;
     text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+}
+
+.login .form-details {
     background: url("images/login-img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.signup .form-details {
+    background: url("images/signup-img.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -192,6 +203,12 @@ form .input-field label {
     text-decoration: underline;
 }
 
+.form-box :where(.forgot-pass, .policy-text) {
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+
 form button {
     width: 100%;
     outline: none;
@@ -213,4 +230,15 @@ form button:hover {
 
 .form-box .bottom-link {
     text-align: center;
+}
+
+.signup .policy-text {
+    display: flex;
+    align-items: center;
+}
+
+.signup .policy-text input {
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
 }
