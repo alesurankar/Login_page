@@ -86,6 +86,11 @@ header {
     border-radius: 3px;
     cursor: pointer;
     background: #7c2923;
+    transition: 0.2s ease;
+}
+
+.navbar .login-btn:hover {
+    background: #d5453a;
 }
 
 .form-popup {
@@ -105,6 +110,18 @@ header {
 
 .form-box .form-details {
     max-width: 330px;
+    width: 100%;
+    color: #152c13;
+    font-weight: 700;
+    text-shadow: 0 0 10px #f7f7f7;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("images/login-img.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .form-box h2 {
@@ -179,4 +196,13 @@ form button {
     color: #000;
     cursor: pointer;
     background: #7c2923;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background: #d5453a;
+}
+
+.form-box .bottom-link {
+    text-align: center;
 }
