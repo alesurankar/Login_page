@@ -102,6 +102,12 @@ header {
     opacity: 0;
     pointer-events: none;
     backdrop-filter: blur(4px);
+    transition: 0.1s ease;
+}
+
+.show-popup .blur-bg-overlay {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .form-popup {
@@ -114,7 +120,14 @@ header {
     pointer-events: none;
     background: #2e3c34;
     border: 2px solid #06150c;
+    transform: translate(-50%, -100%);
+}
+
+.show-popup .form-popup {
+    opacity: 1;
+    pointer-events: auto;
     transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.1s;
 }
 
 .form-popup .close-btn {
