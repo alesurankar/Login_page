@@ -44,9 +44,18 @@ header {
 }
 
 .navbar .logo h2 {
-    color: #4F8212;
+    color: #03230d;
+    text-shadow: 0 0 20px #c2daca;
     font-size: 1.8rem;
     font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo h2:hover {
+    color: #76a584;;
+    text-shadow: 0 0 20px #011909;
+    /*color: #153e22;
+    text-shadow: 0 0 20px #93ddac;*/
 }
 
 .navbar .links {
@@ -56,14 +65,17 @@ header {
 }
 
 .navbar .links a {
-    color: #073616;
+    color: #063816;
     text-decoration: none;
+    text-shadow: 0 0 20px #62d486;
     font-size: 1.3rem;
     font-weight: 700;
+    transition: all 0.3s ease;
 }
 
 .navbar .links a:hover {
-    color: #4F8212;
+    color: #18602f;
+    text-shadow: 0 0 10px #79f09f;
 }
 
 .navbar .login-btn {
@@ -76,8 +88,4 @@ header {
     border-radius: 3px;
     cursor: pointer;
     background: #5F2F24;
-}
-
-.navbar .logo h2:hover {
-    color: #073616;
 }
