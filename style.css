@@ -259,8 +259,13 @@ form button:hover {
     text-align: center;
 }
 
-.form-popup .signup {
+.form-popup .signup,
+.form-popup.show-signup .login  {
     display: none;
+}
+
+.form-popup.show-signup .signup {
+    display: flex;
 }
 
 .signup .policy-text {
