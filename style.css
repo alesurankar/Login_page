@@ -33,9 +33,16 @@ header {
 
 .navbar .menu-btn {
     display: none;
-    color: #fff;
+    color: #03230d;
     cursor: pointer;
+    font-weight: 900;
+    text-shadow: 0 0 20px #c2daca;
     font-size: 1.5rem;
+}
+
+.navbar .menu-btn:hover {
+    color: #76a584;
+    text-shadow: 0 0 20px #011909;
 }
 
 .navbar .logo {
@@ -71,12 +78,18 @@ header {
 
 .navbar .links .close-btn {
     display: none;
-    color: #000;
+    color: #063816;
+    text-shadow: 0 0 20px #62d486;
     cursor: pointer;
     position: absolute;
     right: 20px;
     top: 20px;
     font-size: 1.5rem;
+}
+
+.navbar .links .close-btn:hover {
+    color: #18602f;
+    text-shadow: 0 0 10px #79f09f;
 }
 
 .navbar .links a {
@@ -262,7 +275,6 @@ form button {
     padding: 14px 0;
     border-radius: 3px;
     margin: 25px 0;
-    color: #000;
     cursor: pointer;
     background: #7c2923;
     transition: 0.2s ease;
@@ -322,7 +334,7 @@ form button:hover {
         display: block;
         padding-top: 60px;
         text-align: center;
-        background: #fff;
+        background: url("images/hero-bg.jpg") center / cover no-repeat;
         transition: 0.2s ease;
     }
 
@@ -331,7 +343,6 @@ form button:hover {
     }
 
     .navbar .links a {
-        color: #000;
         display: inline-flex;
         margin: 20px 0;
         font-size: 1.2rem;
