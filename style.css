@@ -322,7 +322,16 @@ form button:hover {
     }
 
      .navbar .logo h2 {
-        font-size: 1.4rem;
+        color: #03230d;
+        text-shadow: 0 0 20px #c2daca;
+        font-size: 1.8rem;
+        font-weight: 700;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .logo h2:hover {
+        color: #97d3a7;
+        text-shadow: 0 0 20px #011909;
     }
 
     .navbar .links {
