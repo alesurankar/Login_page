@@ -1,0 +1,13 @@
+.home,
+.leaderboard,
+.news,
+.support {
+    color: #03230d;
+    text-shadow: 0 0 20px #c2daca;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* <-- centers perfectly */
+}
