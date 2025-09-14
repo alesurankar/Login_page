@@ -7,7 +7,8 @@
     <!-- Google Fonts Link For Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
     <link rel="stylesheet" href="/static/style.css">
-    <script src="/static/script.js" defer></script>
+    <script src="/static/ui.js" defer></script>
+    <script src="/static/pages.js"></script>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -20,10 +21,10 @@
             </a>
             <ul class="links">
                 <li><span class="close-btn material-symbols-rounded">close</span></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Leaderboard</a></li>
-                <li><a href="#">Support</a></li>
+                <li><a href="#" onclick="Pages.loadPage(event, 'home.html')">Home</a></li>
+                <li><a href="#" onclick="Pages.loadPage(event, 'news.html')">News</a></li>
+                <li><a href="#" onclick="Pages.loadPage(event, 'leaderboard.html')">Leaderboard</a></li>
+                <li><a href="#" onclick="Pages.loadPage(event, 'support.html')">Support</a></li>
             </ul>
             <button type="button" class="login-btn">LOG IN</button>
         </nav>
@@ -88,5 +89,6 @@
             </div>
         </div>
      </div>
+     <main class='content' id="content"></main>
 </body>
 </html>
