@@ -1,11 +1,13 @@
 console.log("users.js running!");
 
-const Users = (function () {
+window.Users = (function () {
     // Load users into a container
     function loadUsers(container) {
+        console.log("[Users] loadUsers called", container);
         fetch("/users")
             .then(res => res.json())
             .then(data => {
+                console.log("[Users] Got data:", data);
                 container.innerHTML = "";
                 if (data.users && data.users.length > 0) {
                     const ul = document.createElement("ul");
@@ -25,7 +27,7 @@ const Users = (function () {
             });
     }
     return { 
-        loadUsers
+        loadUsers 
     };
 })();
 
