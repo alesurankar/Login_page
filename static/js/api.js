@@ -59,6 +59,9 @@ loginForm.addEventListener("submit", async (e) => {
     try {
         const result = await API.login(username);
         console.log("Login success:", result);
+        const usernameSpan = document.getElementById("username-placeholder");
+        if (usernameSpan) usernameSpan.textContent = username;
+        hidePopupBtn.click();
     } catch (err) {
         console.error("Login failed:", err);
     }
@@ -71,6 +74,9 @@ signupForm.addEventListener("submit", async (e) => {
     try {
         const result = await API.signup(username);
         console.log("Signup success:", result);
+        const usernameSpan = document.getElementById("username-placeholder");
+        if (usernameSpan) usernameSpan.textContent = username;
+        hidePopupBtn.click();
     } catch (err) {
         console.error("Signup failed:", err);
     }
