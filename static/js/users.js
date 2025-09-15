@@ -3,8 +3,7 @@ console.log("users.js running!");
 window.Users = (() => {
     async function loadUsers(container) {
         try {
-            const res = await fetch("/users");
-            const data = await res.json();
+            const data = await API.getUsers();
             container.innerHTML = "";
             if (data.users?.length) {
                 const ul = document.createElement("ul");
@@ -18,11 +17,10 @@ window.Users = (() => {
                 container.textContent = "No users found";
             }
         } catch (err) {
-            console.error("Failed to load users:", err);
             container.textContent = "Failed to load users";
         }
     }
-    
+
     return { 
         loadUsers 
     };

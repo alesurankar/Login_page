@@ -42,15 +42,15 @@
             </div>
             <div class="form-content">
                 <h2>LOGIN</h2>
-                <form action="#">
+                <form action="/login" method="POST">
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" name="username" required>
                         <label>Uresname</label>
                     </div>
-                    <div class="input-field">
-                        <input type="password" required>
+                    <!-- <div class="input-field">
+                        <input type="password" name="password" required>
                         <label>Password</label>
-                    </div>
+                    </div> -->
                         <button type="submit">Log In</button>
                 </form>
                 <div class="bottom-link">
@@ -66,15 +66,15 @@
             </div>
             <div class="form-content">
                 <h2>SIGN UP</h2>
-                <form action="#">
+                <form action="/signup" method="POST">
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" name="username" required>
                         <label>Enter your Username</label>
                     </div>
-                    <div class="input-field">
-                        <input type="password" required>
+                    <!-- <div class="input-field">
+                        <input type="password" name="password" required>
                         <label>Create password</label>
-                    </div>
+                    </div> -->
                     <div class="policy-text">
                         <input type="checkbox" id="policy">
                         <label for="policy">
@@ -92,7 +92,7 @@
         </div>
     </div>
     <script>
-        const scripts = ["users.js", "pages.js", "ui.js"];
+        const scripts = ["api.js", "users.js", "pages.js", "ui.js"];
         function loadScriptSequentially(index = 0) {
             if (index >= scripts.length) return;
             const file = scripts[index];
