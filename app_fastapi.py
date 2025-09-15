@@ -27,6 +27,10 @@ app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 # --- Initialize DB at startup ---
 init_db()
 
+@app.get("/.well-known/appspecific/com.chrome.devtools.json")
+def chrome_devtools_dummy():
+    return "", 204  # No Content
+
 # Endpoints
 @app.get("/")
 def root():

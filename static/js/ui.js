@@ -1,3 +1,5 @@
+console.log("ui.js running!");
+
 const navbarMenu = document.querySelector(".navbar .links");
 const menuBtn = document.querySelector(".menu-btn");
 const hideMenuBtn = navbarMenu.querySelector(".close-btn");

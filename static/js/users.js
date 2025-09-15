@@ -1,3 +1,5 @@
+console.log("users.js running!");
+
 const Users = (function () {
     // Load users into a container
     function loadUsers(container) {
