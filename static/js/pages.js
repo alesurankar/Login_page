@@ -17,5 +17,7 @@ const Pages = (() => {
         }
     }
 
-    return { loadPage };
+    return { 
+        loadPage 
+    };
 })();
