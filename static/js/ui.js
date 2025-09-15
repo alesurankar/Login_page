@@ -7,6 +7,7 @@ const showPopupBtn = document.querySelector(".login-btn");
 const formPopup = document.querySelector(".form-popup");
 const hidePopupBtn = document.querySelector(".form-popup .close-btn");
 const loginSignupLink = document.querySelectorAll(".form-box .bottom-link a");
+const logoLink = document.querySelector(".logo");
 
 // Show mobile menu
 menuBtn.addEventListener("click", () => {
@@ -29,4 +30,10 @@ loginSignupLink.forEach(link => {
         e.preventDefault();
         formPopup.classList[link.id === "signup-link" ? 'add' : 'remove']("show-signup");
     });
+});
+
+// Clear the main content area
+logoLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    Pages.clearContent();
 });

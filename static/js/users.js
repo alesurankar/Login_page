@@ -22,6 +22,7 @@ window.Users = (() => {
             container.textContent = "Failed to load users";
         }
     }
+    
     return { 
         loadUsers 
     };

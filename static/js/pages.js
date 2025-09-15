@@ -2,15 +2,16 @@ console.log("pages.js running!");
 
 const Pages = (() => {
     async function loadPage(event, page) {
-        if (event) event.preventDefault();
+        if (event) {
+            event.preventDefault();
+        }
         console.log("[Pages] loadPage:", page);
-
         const content = document.getElementById("content");
         try {
-            const res = await fetch(`/pages/${page}`);
-            if (!res.ok) throw new Error("Page not found");
+            const response = await fetch(`/pages/${page}`);
+            if (!response.ok) throw new Error("Page not found");
 
-            content.innerHTML = await res.text();
+            content.innerHTML = await response.text();
 
             const userList = document.getElementById("user-list");
             if (userList && window.Users?.loadUsers) {
@@ -22,7 +23,16 @@ const Pages = (() => {
         }
     }
 
+    function clearContent() {
+        const content = document.getElementById("content");
+        if (content) {
+            content.innerHTML = "";
+            console.log("[Pages] Content cleared");
+        }
+    }
+
     return { 
-        loadPage 
+        loadPage,
+        clearContent
     };
 })();
