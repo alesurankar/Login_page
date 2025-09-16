@@ -13,6 +13,18 @@ const Pages = (() => {
 
             content.innerHTML = await response.text();
 
+            // Highlight active nav item
+            const links = document.querySelectorAll(".links li");
+            links.forEach(li => li.classList.remove("active"));
+
+            if (event) {
+                const link = event.target.closest("a");
+                if (link) {
+                    const li = link.closest("li");
+                    if (li) li.classList.add("active");
+                }
+            }
+        
             const userList = document.getElementById("user-list");
             if (userList && window.Users?.loadUsers) {
                 Users.loadUsers(userList);

@@ -101,7 +101,8 @@ header {
     transition: all 0.3s ease;
 }
 
-.navbar .links a:hover {
+.navbar .links a:hover,
+.navbar .links .active a {
     color: #18602f;
     text-shadow: 0 0 10px #79f09f;
 }
@@ -375,4 +376,3 @@ form button:hover {
         padding: 30px 20px;
     }
 }
-
