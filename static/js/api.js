@@ -12,7 +12,7 @@ const API = (() => {
             body: JSON.stringify({ username })
         });
         if (!res.ok) {
-            const err = await res.json(); // FastAPI sends JSON error
+            const err = await res.json();
             throw new Error(err.detail?.[0]?.msg || "Login failed");
         }
         return await res.json();
